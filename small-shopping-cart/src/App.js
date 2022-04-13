@@ -1,6 +1,7 @@
 import Header from './components/Header';
 import Main from './components/Main';
-import Basket from './components/Basket';
+import Login from './components/Login';
+
 import data from './data';
 import { useState } from 'react';
 function App() {
@@ -29,20 +30,37 @@ function App() {
         )
       );
     }
+    
   };
+  const today = new Date();
+    var year =  today.getFullYear();
+    var month = ("0" + (today.getMonth() + 1)).slice(-2);
+    var date = ("0" + today.getDate()).slice(-2);
+    var oggi= year+"-"+month+"-"+date;       
+    localStorage.setItem('oggi', oggi);
+  if(localStorage.getItem('token') && localStorage.getItem('reset')>oggi){
   return (
-    <div className="App">
-      <Header countCartItems={cartItems.length}></Header>
+    <div className="App">      
       <div className="row">
-        <Main products={products} onAdd={onAdd}></Main>
-        <Basket
-          cartItems={cartItems}
-          onAdd={onAdd}
-          onRemove={onRemove}
-        ></Basket>
+        <Main products={products} onAdd={onAdd} ></Main>
+        
+        <Header countCartItems={cartItems.length}
+        cartItems={cartItems} 
+        onAdd={onAdd}
+        onRemove={onRemove}></Header>
       </div>
     </div>
   );
+  } else {
+    return (
+      <div className="App">
+        
+        <div className="row">
+          <Login></Login>
+      </div>
+      </div>
+    );
+  }
 }
 
 export default App;

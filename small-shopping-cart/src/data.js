@@ -1,23 +1,55 @@
+
 const data = {
+  
   products: [
     {
-      id: '1',
-      name: 'MacBook',
-      price: 1400,
-      image: 'https://picsum.photos/id/180/2400/1600',
-    },
-    {
-      id: '2',
-      name: 'Old Car',
-      price: 2400,
-      image: 'https://picsum.photos/id/111/4400/2656',
-    },
-    {
-      id: '3',
-      name: 'W Shoes',
-      price: 1000,
-      image: 'https://picsum.photos/id/21/3008/2008',
-    },
-  ],
+      "id": 2,
+      "nome_prod": "Cappuccino",
+      "description": "caldo con schiuma",
+      "prezzo": "2.00",
+      "note": "ZUCCHERO GRATIS",
+      "categoria": "BAR"
+  },
+  {
+      "id": 3,
+      "nome_prod": "Cornetto",
+      "description": "creme varie",
+      "prezzo": "2.00",
+      "note": "scrivere la crema sulle note",
+      "categoria": "BAR"
+  },
+  {
+      "id": 1,
+      "nome_prod": "Caffè",
+      "description": "tazzuriell e cafè",
+      "prezzo": "1.20",
+      "note": "ZUCCHERO GRATIS",
+      "categoria": "BAR"
+  },
+  {
+      "id": 4,
+      "nome_prod": "ghiacciolo",
+      "description": "freddo",
+      "prezzo": "99.00",
+      "note": "sd",
+      "categoria": "Bar"
+  },
+  {
+      "id": 5,
+      "nome_prod": "Spritz",
+      "description": "alcolico",
+      "prezzo": "5.00",
+      "note": "con patatine",
+      "categoria": "Bar"
+  },
+  {
+      "id": 6,
+      "nome_prod": "birra",
+      "description": "frost",
+      "prezzo": "3.00",
+      "note": "con olive",
+      "categoria": "Bar"
+  }
+      ]    ,
 };
 export default data;

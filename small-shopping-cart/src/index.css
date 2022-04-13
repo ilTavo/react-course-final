@@ -19,7 +19,7 @@ a {
   text-decoration: none;
 }
 .row {
-  display: flex;
+  display: block;
   justify-content: space-between;
 }
 .row.center {
@@ -54,16 +54,27 @@ button {
   cursor: pointer;
 }
 button.add {
-  background-color: #40c0f0;
-  width: 1.5rem;
+  background-color: #06b139;
+  width: auto;
 }
 button.remove {
   background-color: #f04040;
-  width: 1.5rem;
+  width: auto;
+  color: #ffffff;
+  margin-right: 30%;
 }
 button.badge {
   background-color: #f04040;
   border: none;
   color: #ffffff;
   width: 1.5rem;
+}
+.css-pwngrv-MuiPaper-root-MuiCard-root {
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.87);
+  margin: 10px;
+  overflow: initial!important;
+}
+.MuiBox-root {
+padding: 3px;
 }
